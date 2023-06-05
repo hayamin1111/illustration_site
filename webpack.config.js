@@ -1,14 +1,15 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/js/script.js',
   //エントリーポイントの指定
   output: {
     path: path.resolve(__dirname, './dist'),
     //出力先の指定（絶対パスで指定する）
     //__dirnameプロジェクトのある階層
-    // filename: 'index.js',
+    filename: './js/script.js',
     //出力するファイルネームの変更
   },
   module: {
@@ -18,7 +19,7 @@ module.exports = {
         //ファイル名を検知するためのもの、ドットをエスケープしている
         use: [
           {
-            loader: 'style-loader',
+            loader: MiniCssExtractPlugin.loader,
             //cssをDOMに出力
           },
           {
@@ -31,6 +32,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: './css/style.css',
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),

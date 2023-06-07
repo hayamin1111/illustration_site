@@ -3,31 +3,38 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+  devtool: 'source-map',
   entry: './src/js/script.js',
-  //エントリーポイントの指定
   output: {
     path: path.resolve(__dirname, './dist'),
-    //出力先の指定（絶対パスで指定する）
-    //__dirnameプロジェクトのある階層
     filename: './js/script.js',
-    //出力するファイルネームの変更
   },
   module: {
     rules: [
       {
-        test: /\.css/,
-        //ファイル名を検知するためのもの、ドットをエスケープしている
+        test: /\.(css|sass|scss)/, 
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            //cssをDOMに出力
           },
           {
             loader: 'css-loader',
-            //cssをjsにいれる　
-            //ローダーは下から適応される
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader', 
           },
         ],
+      },
+      {
+        test: /\.png|\.jpg/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name][ext]',
+        },
       },
     ],
   },
@@ -38,5 +45,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-  ]
+  ],
+  devServer: {
+    static: path.resolve(__dirname, 'src'),
+  }
 }

@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hayamin1111/illustration_site.git"
+    "start": "webpack serve",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +16,11 @@
     "html-webpack-plugin": "^5.5.1",
     "mini-css-extract-plugin": "^2.7.6",
     "normalize.css": "^8.0.1",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.85.0",
-    "webpack-cli": "^5.1.2"
+    "webpack-cli": "^5.1.2",
+    "webpack-dev-server": "^4.15.0"
   }
 }

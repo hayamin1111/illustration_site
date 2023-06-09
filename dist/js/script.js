@@ -98,6 +98,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
 
 
+// import imagemin from 'imagemin';
+// import imageminMozjpeg from 'imagemin-mozjpeg';
+
+// (async () => {
+//   await imagemin(['src/assets/img/**/*.jpg'], {
+//       destination: 'build/images',
+//       plugins: [
+//           imageminMozjpeg()
+//       ]
+//   });
+
+//   console.log('Images optimized');
+// })();
 
 (0,_sub__WEBPACK_IMPORTED_MODULE_0__.hello)();
 

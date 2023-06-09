@@ -1,12 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
   entry: './src/js/script.js',
   output: {
+    clean: true,
     path: path.resolve(__dirname, './dist'),
     filename: './js/script.js',
   },
@@ -27,10 +29,19 @@ module.exports = {
           {
             loader: 'sass-loader', 
           },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 20,
+              },
+            },
+          },
         ],
       },
       {
-        test: /\.png|\.jpg/,
+        test: /\.(png|jpg|jpeg)/,
         type: 'asset/resource',
         generator: {
           filename: 'img/[name][ext]',
@@ -45,6 +56,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
+		new CleanWebpackPlugin(),
   ],
   devServer: {
     static: path.resolve(__dirname, 'src'),

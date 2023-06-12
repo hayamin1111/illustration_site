@@ -1,0 +1,33 @@
+@use 'variable' as var;
+
+
+@mixin svg($fontSize) {
+	font-family: var.$font-malily;
+	font-weight: 700;
+	font-size: $fontSize;
+	stroke: var.$color-main;
+	stroke-width: 1px;
+	fill: transparent;
+	dominant-baseline: central;
+}
+
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (min-width: 640px) {
+			@content;
+		}
+	}
+	@if $point == pc {
+		@media (min-width: 750px) {
+			@content;
+		}
+	}
+}
+
+// // min-width:640px
+// @include breakpoint(tablet) {
+// }
+
+// // min-width:750px
+// @include breakpoint(pc) {
+// }

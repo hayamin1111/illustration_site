@@ -4,20 +4,152 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template</title>
+  <title>The Daydream | HYKW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="large">
+  <meta name="twitter:site" content="">
+  <meta property="og:locale" content="ja_JP">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 <body>
-  <h1>HEll0</h1>
-  <img src="<%= require('./img/bg-noise.png') %>" alt="">
-  <img src="<%= require('./img/img-cybercity.jpg') %>" alt="" loading="lazy">
-  <img src="<%= require('./img/img-window.jpg') %>" alt="" loading="lazy">
-  <img src="<%= require('./img/img-alice.jpg') %>" alt="" loading="lazy">
-  <img src="<%= require('./img/img-anywhereDoor.jpg') %>" alt="" loading="lazy">
-  <img src="<%= require('./img/img-engelroad.jpg') %>" alt="" loading="lazy">
-  <img src="<%= require('./img/img-floating.jpg') %>" alt="" loading="lazy">
-  <div class="content">
-    <div class="title">タイトル</div>
-    <div class="title-lg">タイト</div>
-  </div>
+  <header class="l-header"><h1 class="l-header__logo c-inner">HYKW</h1></header>
+  <main class="l-main c-inner">
+    <section class="c-section p-mainvisual">
+      <h2 class="p-mainvisual__title">
+        <span class="p-mainvisual__subtitle">HYKW illustrations</span>
+        The Daydream
+      </h2>
+      <p class="p-mainvisual__lead">
+        This web site is HYKW’s daydream. Everyone has fantasies, don't they?I draw to unwind. This we<br>
+        b site is HYKW’s daydream. Everyone has fantasies, don't they?I draw to unwind. This web<br>
+        site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
+        I draw to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?I draw<br>
+        to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
+        I draw to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
+        I draw to unwind.
+      </p>
+      <div class="p-mainvisual__image">
+        <img src="<%= require('./img/img-cybercity.jpg') %>" alt="cyber city and woman smorking" loading="lazy">
+      </div>
+      <section class="c-section p-pickup">
+        <h3 class="c-section__title p-pickup__title">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0, 0, 704, 102">
+            <text x="0" y="50%">
+              Recent Favorites
+            </text>
+          </svg>
+        </h3>
+        <section class="p-pickup__content p-pickup__content1">
+          <h3 class="p-pickup__subtitle">Doraemon</h3>
+          <p class="p-pickup__desc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</p>
+          <span class="p-pickup__number">#1</span>
+          <button class="c-button c-button--internal p-pickup__button"></button>
+        </section>
+        <section class="p-pickup__content p-pickup__content2">
+          <h3 class="p-pickup__subtitle">Geralt of rivia</h3>
+          <p class="p-pickup__desc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</p>
+          <span class="p-pickup__number">#2</span>
+          <button class="c-button c-button--internal p-pickup__button"></button>
+        </section>
+        <section class="p-pickup__content p-pickup__content3">
+          <h3 class="p-pickup__subtitle">Dekai kame</h3>
+          <p class="p-pickup__desc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</p>
+          <span class="p-pickup__number">#3</span>
+          <button class="c-button c-button--internal p-pickup__button"></button>
+        </section>
+      </section>
+      <section class="c-section p-funart">
+        <div class="p-funart__contents">
+          <h3 class="c-section__title p-funart__title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0, 0, 315, 106">
+              <text x="0" y="50%">
+                Fan Art
+              </text>
+            </svg>
+          </h3>
+          <p class="p-funart__lead">Somewhere else that i dont know</p>
+          <div class="p-funart__slide">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <div class="p-funart__caption">
+                    <p>Somewhere else that i dont know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i dont know. Someone stare at  me.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="./img/fun-art/img-gralt01.png" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <div class="p-funart__caption">
+                    <p>Somewhere else that i dont know. Someone stare at  me.zSomewhere else that i dont know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <div class="p-funart__caption">
+                    <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="./img/fun-art/img-gralt01.png" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <div class="p-funart__caption">
+                    <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <div class="p-funart__caption">
+                    <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div> 
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <p class="p-funart__desc">Dayd ream Daydrea mDaydreamDa ydreamD  aydre amDaydrea mDaydream Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+      </section>
+      <section class="c-section p-handdrawn">
+        <h3 class="c-section__title p-handdrawn__title">Hand-drawn</h3>
+        <p class="p-handdrawn__lead">
+          Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.
+        </p>
+        <ul class="p-handdrawn__images">
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
+        </ul>
+      </section>
+      <section class="c-section p-flowers">
+        <h3 class="c-section__title p-flowers__title">So Many Flowers, So Many Beauties.</h3>
+      </section>
+    </section>
+    <div class="p-top-loading"></div>  
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__contents">
+      <p class="l-footer__sleeping-talk">My daydream continue...</p>
+      <small>&copy;HYKW</small>
+      <a href="" class="c-button c-button--external">Twitter</a>
+    </div>
+  </footer>
 </body>
 </html>

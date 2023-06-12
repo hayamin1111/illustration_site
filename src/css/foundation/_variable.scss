@@ -1,0 +1,20 @@
+/*-- color --*/
+$color-base: #FAF7FC;
+$color-main: #0D001A;
+$color-sub: #D9CFE2;
+$color-accent: #F8B500;
+
+/*-- font family --*/
+$font-malily: 'Imbue', serif;
+
+/*-- font size --*/
+$font-size-base: clamp(16px, 2.2222vw, 32px);
+$font-size-logo: clamp(24px, 3.0000vw, 48px);
+$font-size-heading: clamp(60px, 13.8900vw, 200px);
+$font-size-s: clamp(24px, 4.4444vw, 64px);
+$font-size-m: clamp(32px, 6.6666vw, 96px);
+$font-size-l: clamp(48px, 8.8888vw, 128px);
+$font-size-xl: clamp(96px, 17.2222vw, 248px);
+
+/*-- margin --*/
+$margin-negative: -4.17%;

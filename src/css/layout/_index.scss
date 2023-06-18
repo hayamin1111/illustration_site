@@ -1,13 +1,38 @@
 @use '../foundation/variable' as var;
 
 /*- header -*/
+.l-main {
+	position: relative;
+}
+/*- header -*/
 .l-header {
-	position: sticky;
-	top: 0;
-	padding-top: 1.3889%;
-	z-index: 1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s;
+	z-index: 3;
+	&.is-done {
+		position: sticky;
+		top: 0;
+		left: 0;
+		transform: translate(0, 0);
+		padding-top: 1.3889%;
+		z-index: 1;
+		opacity: 1;
+		visibility: visible;
+	}
 	&__logo {
 		line-height: 1;
+		mix-blend-mode: multiply;
 		font-size: var.$font-size-logo;
 	}
+}
+
+/*- footer -*/
+.l-footer {
+	border-top: 1px solid var.$color-main;
 }

@@ -19,8 +19,8 @@
   <meta property="og:locale" content="ja_JP">
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
-<body>
-  <header class="l-header"><h1 class="l-header__logo c-inner">HYKW</h1></header>
+<body id="body">
+  <header class="l-header" id="js-loadingTitle"><h1 class="l-header__logo c-inner">HYKW</h1></header>
   <main class="l-main c-inner">
     <section class="c-section p-mainvisual">
       <h2 class="p-mainvisual__title">
@@ -37,7 +37,15 @@
         I draw to unwind.
       </p>
       <div class="p-mainvisual__image">
-        <img src="<%= require('./img/img-cybercity.jpg') %>" alt="cyber city and woman smorking" loading="lazy">
+        <div class="p-mainvisual__marquee" id="js-marquee">Welcome Welcome Welcome Welcome Welcome Welcome</div>
+      </div>
+      <div class="p-mainvisual__background">
+        <svg viewBox="0 0 1444 1028" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="bubblepath" d="M1445 1C1350.46 175.667 1096.28 533.4 835.844 567C510.295 609 110.848 797 1 1027">
+        </svg>
+      </div>
+      <div class="p-mainvisual__bubble" id="js-bubble01">
+        <img src="./img/mainvisual/img-bubble.png" alt="">
       </div>
       <section class="c-section p-pickup">
         <h3 class="c-section__title p-pickup__title">
@@ -80,36 +88,36 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
-                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <a href=""><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-tachikoma01.jpg') %>" alt=""></a> -->
                   <div class="p-funart__caption">
                     <p>Somewhere else that i dont know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i dont know. Someone stare at  me.</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <a href=""><img src="./img/fun-art/img-gralt01.png" alt=""></a>
-                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <a href=""><img src="./img/fun-art/img-gralt01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-tachikoma01.jpg') %>" alt=""></a> -->
                   <div class="p-funart__caption">
                     <p>Somewhere else that i dont know. Someone stare at  me.zSomewhere else that i dont know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
-                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <a href=""><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-tachikoma01.jpg') %>" alt=""></a> -->
                   <div class="p-funart__caption">
                     <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <a href=""><img src="./img/fun-art/img-gralt01.png" alt=""></a>
-                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <a href=""><img src="./img/fun-art/img-gralt01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-tachikoma01.jpg') %>" alt=""></a> -->
                   <div class="p-funart__caption">
                     <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <a href=""><img src="./img/fun-art/img-draemon01.jpg" alt=""></a>
-                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-draemon01.jpg') %>" alt=""></a> -->
+                  <a href=""><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></a>
+                  <!-- <a href=""><img src="<%= require('./img/fun-art/img-tachikoma01.jpg') %>" alt=""></a> -->
                   <div class="p-funart__caption">
                     <p>Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
                   </div>
@@ -123,32 +131,64 @@
         <p class="p-funart__desc">Dayd ream Daydrea mDaydreamDa ydreamD  aydre amDaydrea mDaydream Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
       </section>
       <section class="c-section p-handdrawn">
-        <h3 class="c-section__title p-handdrawn__title">Hand-drawn</h3>
-        <p class="p-handdrawn__lead">
-          Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.
-        </p>
-        <ul class="p-handdrawn__images">
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-          <li><img src="<%= require('./img/img-cybercity.jpg') %>" alt=""></li>
-        </ul>
+        <h3 class="c-section__title p-handdrawn__title">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0, 0, 551, 154">
+            <text x="0" y="50%">
+              Hand-drawn
+            </text>
+          </svg>
+        </h3>
+        <div class="p-handdrawn__contents">
+          <p class="p-handdrawn__lead">
+            Somewhere else that i don’t know. <br>Someone stare at  me.zSomewhere<br> else that i don’t know. <br>Someone stare at  me.<br>zSomewhere else that i <br>don’t know. Someone stare at  me.
+          </p>
+          <ul class="p-handdrawn__images">
+            <li><img src="./img/hand-drawn/img-julian.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-hei.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-julian.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-hei.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-julian.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-hei.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-julian.jpg" alt=""></li>
+            <li><img src="./img/hand-drawn/img-hei.jpg" alt=""></li>
+            <!-- <li><img src="<%= require('./img/hand-drawn/img-julian.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-hei.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-julian.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-hei.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-julian.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-hei.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-julian.jpg') %>" alt=""></li>
+            <li><img src="<%= require('./img/hand-drawn/img-hei.jpg') %>" alt=""></li> -->
+          </ul>
+        </div>
       </section>
       <section class="c-section p-flowers">
-        <h3 class="c-section__title p-flowers__title">So Many Flowers, So Many Beauties.</h3>
+        <div class="p-flowers__titles">
+          <h3 class="c-section__title p-flowers__title">So Many Flowers, So Many Beauties.</h3>
+          <p class="p-flowers__lead">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.z</p>
+        </div>
+        <ul class="p-flowers__images">
+          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
+          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
+          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
+        </ul>
       </section>
     </section>
-    <div class="p-top-loading"></div>  
   </main>
+  <div class="p-loading__text" id="js-loadingText"></div>
+  <div class="p-loading__background" id="js-loadingBackground"></div>
   <footer class="l-footer">
     <div class="l-footer__contents">
-      <p class="l-footer__sleeping-talk">My daydream continue...</p>
-      <small>&copy;HYKW</small>
-      <a href="" class="c-button c-button--external">Twitter</a>
+      <p class="l-footer__inner p-footer__sleeping-talk">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0, 0, 1508, 228">
+          <text x="0" y="50%">
+            My daydream continue...
+          </text>
+        </svg>
+      </p>
+      <div class="p-footer__copyright">
+        <small>&copy;Hayakawa</small>
+      </div>
     </div>
   </footer>
 </body>

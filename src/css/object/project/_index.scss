@@ -2,19 +2,49 @@
 @use '../../foundation/mixin' as *;
 
 
+/*- loading -*/
+.p-loading {
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all .3s;
+    &.is-done {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var.$color-base;
+    z-index: 1;
+    transition: all .3s;
+    &.is-done {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
 /*- main visual -*/
 .p-mainvisual {
   &__title {
     display: flex;
     flex-direction: column;
     margin-bottom: 6.8182%;
-    background: linear-gradient(#000, #000) 0 92% / 100% 1px no-repeat;
+    background: linear-gradient(var.$color-main, var.$color-main) 0 92% / 100% 1px no-repeat;
     align-items: center;
     font-size: var.$font-size-heading;
     letter-spacing: 0.02em;
     line-height: 1;
   }
   &__subtitle {
+    display: inline-block;
+    margin-bottom: 0.7576%;
     font-size: var.$font-size-base;
     font-weight: normal;
   }
@@ -22,10 +52,56 @@
     margin-bottom: 9.0909%;
   }
   &__image {
+    position: relative;
     width: 59.7727%;
+    aspect-ratio: 4 / 3;
     margin-right: var.$margin-negative;
     margin-left: auto;
     margin-bottom: 10.6061%;
+    background: url(../../../img/mainvisual/img-cybercity.jpg) right bottom / contain no-repeat;
+  }
+  &__marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    aspect-ratio: 1 / 1;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: exclusion;
+    color: #fff;
+    animation: rotateMarquee 20s infinite linear;
+  }
+  @keyframes rotateMarquee {
+    0% {
+      transform: translate(-50%, -50%) rotate(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  &__background {
+    position: absolute;
+    top: 8.34%;
+    left: var.$margin-negative;
+    width: calc(100% + 4.17%);
+  }
+  &__bubble {
+    position: relative;
+    width: 160px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: rotateBubble 14s linear;
+    }
+  }
+  @keyframes rotateBubble {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -56,13 +132,13 @@
     position: relative;
     margin-left: 3.0303%;
     padding-bottom: 2.5189%;
-    border-bottom: 1px solid var.$color-main;
+    border-bottom: 1px solid var.$color-sub2;
   }
   &__content1 {
     grid-column: 2;
     grid-row: 1;
     padding-top: 0.8396%;
-    border-top: 1px solid var.$color-main;
+    border-top: 1px solid var.$color-sub2;
   }
   &__content2 {
     grid-column: 2;
@@ -109,6 +185,7 @@
     grid-row: 1;
     grid-column: 2;
     align-self: baseline;
+    width: 92.6282%;
   }
   &__title text {
     @include svg(128px);
@@ -132,7 +209,105 @@
     font-size: var.$font-size-m;
     color: var.$color-sub;
     line-height: 1.2;
+    text-align: right;
     z-index: -1;
   }
 }
 
+/*-- hand drawn --*/
+.p-handdrawn {
+  &__title {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    &::after {
+      display: inline-block;
+      flex: 1 1 100%;
+      height: 1px;
+      background: var.$color-sub2;
+      transform: translateX(7.6336%);
+      content: "";
+    }
+  }
+  &__title svg {
+    flex-shrink: 0;
+    width: 39.7727%;
+  }
+  &__title text {
+    @include svg(128px);
+  }
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__lead {
+    width: 23.6364%;
+  }
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-auto-rows: auto;
+    gap: 24px;
+    width: 68.1818%;
+    margin-left: 6.3636%;
+  }
+}
+
+/*-- flowers --*/
+.p-flowers {
+  &__titles {
+    width: fit-content;
+    margin-right: var.$margin-negative;
+    margin-left: auto;
+    margin-bottom: 5.5455%;
+  }
+  &__title {
+    font-size: var.$font-size-m;
+  }
+  &__lead {
+    text-align: left;
+  }
+  &__images {
+    display: flex;
+    gap: 24px;
+    margin: 0 calc(50% - 50vw);
+     li {
+        width: 33.3333%;
+     }
+  }
+}
+
+
+/*-- footer --*/
+.p-footer {
+  &__sleeping-talk text {
+    @include svg(184px);
+  }
+  &__copyright {
+    margin: 0 1.3889%;
+    padding-bottom:  1.3889%;
+    text-align: right;
+  }
+}
+
+.p-background{
+  &__path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  // &__images {
+  //   // position: absolute;
+  //   display: flex;
+  //   // top: 0;
+  //   // left: 0;
+  //   gap: 1.8182%;
+  //   div {
+  //     width: calc(180 / 1320 * 100%);
+  //     img {
+  //       filter: grayscale(50%) opacity(.7);
+  //     }
+  //   }
+  // }
+}

@@ -199,10 +199,13 @@
     top: 0;
     left: 0;
     width: 34.7628%;
+    pointer-events: none;
     @include hide(5px, .2s, .5s);
+    transform: translateZ(0);
     z-index: 1;
     &.is-show {
       @include show();
+      transform: translateZ(200px);
     }
   }
 }

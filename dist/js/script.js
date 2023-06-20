@@ -9711,115 +9711,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/gsap-core.js");
 
-
 /**
  * @descroption マウスオーバー時の画像表示
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
   const pickupContents = document.querySelectorAll('.js-pickupContent');
+  let mouseX = 0;
+  let mouseY = 0;
   if(pickupContents.length) {
     Array.from(pickupContents).forEach(function(content) {
-      // let image = content.lastElementChild;
-      content.addEventListener('mouseenter', e => {
-        let image = e.currentTarget.querySelector('.js-pickupImage');
-        image.classList.add('is-show');
-        // console.log('mouseenter');
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
-          duration: .4,
-          autoAlpha: 1,
-          scale: 1,
-          ease: gsap__WEBPACK_IMPORTED_MODULE_1__.Power4.out,
-          overwrite: true,
-        })
-      }),
-      content.addEventListener('mouseleave', e => {
-        console.log('mouseleave');
-        let image = e.currentTarget.querySelector('.js-pickupImage');
-        image.classList.remove('is-show');
-        gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
-          duration: .4,
-          autoAlpha: 0,
-          scale: 0,
-          ease: gsap__WEBPACK_IMPORTED_MODULE_1__.Power4.out,
-          // overwrite: true,
-        })
-      }),
-      content.addEventListener('mousemove', e => {
-        console.log('mosemove');
-        let image = e.currentTarget.querySelector('.js-pickupImage');
-        let posContentX = e.currentTarget.getBoundingClientRect().left;
-        let posContentY = e.currentTarget.getBoundingClientRect().top;
-        // let posImageX = image.getBoundingClientRect().left;
-        let x =  e.clientX - posContentX - image.clientWidth / 2;
-        let y =  e.clientY - posContentY - image.clientHeight / 2;
-        // let 
-        // if(e.clientY < posContentY) {
-          // console.log('test');
-        // if(e.clientX < posContentX - 10 && e.clientY < posContentY - 10) {
-          gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
-            duration: .7,
-            x: x,
-            y: y,
-            // overwrite: false,
-          })
-        // }
-          // e.currentTarget.lastElementChild.style.transform = `translate(${x}px, ${y}px)`;
-        // }
-      });
+      content.addEventListener('mouseenter', mouseEnterHandler, { passive: true });
+      content.addEventListener('mouseleave', mouseLeaveHandler, { passive: true });
+      content.addEventListener('mousemove', mouseMoveHandler, { passive: true });
     });
+    function mouseEnterHandler(e) {
+      console.log(e.target, e.currentTarget);
+      let image = this.querySelector('.js-pickupImage');
+      let posContentX = this.getBoundingClientRect().left;
+      let posContentY = this.getBoundingClientRect().top;
+      let cursorX = e.clientX - posContentX;
+      let cursorY = e.clientY - posContentY;
+      let centerPointX = cursorX - image.clientWidth / 2;
+      let centerPointY = cursorY - image.clientHeight / 2;
+      image.classList.add('is-show');
+
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(image, { x: centerPointX, y: centerPointY });
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
+        duration: .3,
+        autoAlpha: 1,
+        skewX: 0,
+        ease: gsap__WEBPACK_IMPORTED_MODULE_1__.Power4.out,
+      })
+    }
+    function mouseLeaveHandler(e) {
+      let image = this.querySelector('.js-pickupImage');
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
+        duration: .3,
+        autoAlpha: 0,
+        skewX: -30,
+        ease: gsap__WEBPACK_IMPORTED_MODULE_1__.Power4.out,
+        overwrite: true,
+      })
+      image.classList.remove('is-show');
+    }
+    function mouseMoveHandler(e) {
+      let image = this.querySelector('.js-pickupImage');
+      let posContentX = this.getBoundingClientRect().left;
+      let posContentY = this.getBoundingClientRect().top;
+      mouseX =  e.clientX - posContentX - image.clientWidth / 2;
+      mouseY =  e.clientY - posContentY - image.clientHeight / 2;
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(image, {
+        duration: .7,
+        x: mouseX,
+        y: mouseY,
+      })
+    }
+    //画像の上にmouseがのっていると、切り返されない 画像の上は除外したい
       
   }
 });
-// export default () => {
-//   const pickupContents = document.querySelectorAll('.js-pickupContent');
-//   if(pickupContents.length) {
-//     Array.from(pickupContents).forEach(function(content) {
-//       // let image = content.lastElementChild;
-//       content.addEventListener('mouseenter', e => {
-//         e.currentTarget.lastElementChild.classList.add('is-show');
-//         console.log('mouseenter');
-//         gsap.to(e.currentTarget.lastElementChild, {
-//           duration: .4,
-//           autoAlpha: 1,
-//           scale: 1,
-//           ease: Power4.out,
-//           overwrite: true,
-//         })
-//       }),
-//       content.addEventListener('mouseleave', e => {
-//         console.log('mouseleave');
-//         e.currentTarget.lastElementChild.classList.remove('is-show');
-//         gsap.to(e.currentTarget.lastElementChild, {
-//           duration: .4,
-//           autoAlpha: 0,
-//           scale: 0,
-//           ease: Power4.out,
-//           overwrite: true,
-//         })
-//       }),
-//       content.addEventListener('mousemove', e => {
-//         console.log('mosemove');
-//         let posContentX = e.currentTarget.getBoundingClientRect().left;
-//         let posContentY = e.currentTarget.getBoundingClientRect().top;
-//         let posImageX = e.currentTarget.lastElementChild.getBoundingClientRect().left;
-//         let imageHeight = e.currentTarget.lastElementChild.clientHeight;
-//         let x =  e.clientX - posContentX - posImageX / 2;
-//         let y =  e.clientY - (posContentY + imageHeight / 2);
-//         // if(e.clientY < posContentY) {
-//           // console.log('test');
-//         gsap.to(e.currentTarget.lastElementChild, {
-//           duration: .7,
-//           x: x,
-//           y: y,
-//           overwrite: false,
-//         })
-//           // e.currentTarget.lastElementChild.style.transform = `translate(${x}px, ${y}px)`;
-//         // }
-//       });
-//     });
-      
-//   }
-// }
 
 
 

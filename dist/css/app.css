@@ -340,7 +340,6 @@ html {
 }
 
 body {
-  position: relative;
   width: 100%;
   height: 100%;
   background-color: #FAF7FC;
@@ -351,6 +350,9 @@ body {
   color: #0D001A;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+body.is-done {
+  position: relative;
 }
 
 img,
@@ -397,29 +399,16 @@ a:hover {
 /*- header -*/
 .l-main {
   position: relative;
+  margin: 0 auto;
+  padding: 4.17% 4.17% 0;
 }
 
 /*- header -*/
 .l-header {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 1s;
-  z-index: 3;
-}
-.l-header.is-done {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 1.3889%;
   left: 0;
-  transform: translate(0, 0);
-  padding-top: 1.3889%;
-  z-index: 1;
-  opacity: 1;
-  visibility: visible;
+  z-index: 2;
 }
 .l-header__logo {
   line-height: 1;
@@ -491,12 +480,12 @@ a:hover {
   visibility: hidden;
 }
 .p-loading__background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #FAF7FC;
+  background-color: #F8B500;
   z-index: 1;
   transition: all 0.3s;
 }
@@ -507,23 +496,51 @@ a:hover {
 
 /*- main visual -*/
 .p-mainvisual__title {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 6.8182%;
-  background: linear-gradient(#0D001A, #0D001A) 0 92%/100% 1px no-repeat;
+  background: linear-gradient(transparent, transparent) 0 92%/100% 1px no-repeat;
   align-items: center;
   font-size: clamp(60px, 13.89vw, 200px);
   letter-spacing: 0.02em;
   line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(20px);
+  transition: opacity 0.5s, filter 0.9s;
+  z-index: 0;
 }
-.p-mainvisual__subtitle {
+.p-mainvisual__title > .p-mainvisual__subtitle {
   display: inline-block;
   margin-bottom: 0.7576%;
   font-size: clamp(16px, 2.2222vw, 32px);
   font-weight: normal;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+.p-mainvisual__title.is-done {
+  background: linear-gradient(#0D001A, #0D001A) 0 92%/100% 1px no-repeat;
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0);
+}
+.p-mainvisual__title.is-done > .p-mainvisual__subtitle {
+  visibility: visible;
+  opacity: 1;
 }
 .p-mainvisual__lead {
   margin-bottom: 9.0909%;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(10px);
+  transition: opacity 0.5s, filter 1s;
+}
+.p-mainvisual__lead.is-done {
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0);
 }
 .p-mainvisual__image {
   position: relative;
@@ -544,6 +561,15 @@ a:hover {
   mix-blend-mode: exclusion;
   color: #fff;
   animation: rotateMarquee 20s infinite linear;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(5px);
+  transition: opacity 0.5s, filter 1s;
+}
+.p-mainvisual__marquee.is-done {
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0);
 }
 @keyframes rotateMarquee {
   0% {
@@ -567,7 +593,7 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  animation: rotateBubble 14s linear;
+  animation: rotateBubble 10s linear infinite;
 }
 @keyframes rotateBubble {
   0% {
@@ -648,6 +674,22 @@ a:hover {
   position: absolute;
   top: 5.5416%;
   right: 0;
+}
+.p-pickup__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34.7628%;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(5px);
+  transition: opacity 0.2s, filter 0.5s;
+  z-index: 1;
+}
+.p-pickup__image.is-show {
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0);
 }
 
 /*-- funart --*/
@@ -740,6 +782,9 @@ a:hover {
   gap: 24px;
   width: 68.1818%;
   margin-left: 6.3636%;
+}
+.p-handdrawn__images img {
+  filter: blur(5px);
 }
 
 /*-- flowers --*/

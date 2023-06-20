@@ -3,28 +3,15 @@
 /*- header -*/
 .l-main {
 	position: relative;
+	margin: 0 auto;
+	padding: 4.1700% 4.1700% 0;
 }
 /*- header -*/
 .l-header {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: fixed;
+	top: 1.3889%;;
+	left: 0;
 	z-index: 2;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 1s;
-	z-index: 3;
-	&.is-done {
-		position: sticky;
-		top: 0;
-		left: 0;
-		transform: translate(0, 0);
-		padding-top: 1.3889%;
-		z-index: 1;
-		opacity: 1;
-		visibility: visible;
-	}
 	&__logo {
 		line-height: 1;
 		mix-blend-mode: multiply;

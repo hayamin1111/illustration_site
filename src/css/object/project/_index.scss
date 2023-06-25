@@ -71,6 +71,9 @@
     &.is-done {
       @include show();
     }
+    @include tab {
+      margin-bottom: 15%;
+    }
   }
   &__image {
     position: relative;
@@ -80,6 +83,9 @@
     margin-left: auto;
     margin-bottom: 10.6061%;
     background: url(../../../img/mainvisual/img-cybercity.jpg) right bottom / contain no-repeat;
+    @include tab {
+      width: 90%;
+    }
   }
   &__marquee {
     position: absolute;
@@ -119,6 +125,9 @@
       left: 0;
       animation: rotateBubble 10s linear infinite;
     }
+    @include tab {
+      width: 90px;
+    }
   }
   @keyframes rotateBubble {
     0% {
@@ -130,11 +139,15 @@
   }
 }
 
+
 /*-- pickup --*/
 .p-pickup{
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: 1fr 87.2727%;
+  @include tab {
+    grid-template-columns: auto;
+  }
   &__title {
     grid-column: 1;
     grid-row: 1 / 4;
@@ -142,6 +155,10 @@
     position: relative;
     justify-content: center;
     align-items: center;
+    @include tab {
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
   &__title svg {
     position: absolute;
@@ -149,6 +166,11 @@
     left: 0;
     transform: rotate(90deg) translateY(calc(-100% * 5.1077)) scale(5.1077);
     transform-origin: top left;
+    @include tab {
+      position: static;
+      transform: rotate(0) translateY(0) scale(1);
+      margin-bottom: 5%;
+    }
   }
   &__title text {
     @include svg(128px);
@@ -156,34 +178,60 @@
   &__content {
     position: relative;
     margin-left: 3.0303%;
-    padding-bottom: 2.5189%;
     border-bottom: 1px solid var.$color-sub2;
-    perspective: 600px;
-    transform-style: preserve-3d;
+    @include tab {
+      margin-left: 0;
+    }
   }
   &__content1 {
     grid-column: 2;
     grid-row: 1;
-    padding-top: 0.8396%;
     border-top: 1px solid var.$color-sub2;
+    @include tab {
+      grid-column: 1;
+      grid-row: 2;
+    }
   }
   &__content2 {
     grid-column: 2;
     grid-row: 2;
+    @include tab {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
   &__content3 {
     grid-column: 2;
     grid-row: 3;
+    @include tab {
+      grid-column: 1;
+      grid-row: 4;
+    }
+  }
+  &__button {
+    padding-top: 0.8396%;
+    padding-bottom: 2.5189%;
+    background: none;
+    pointer-events: all;
+    text-align: left;
+    cursor: pointer;
+    @include tab {
+      padding-top: 3%;
+      padding-bottom: 3%;
+    }
   }
   &__subtitle {
+    display: block;
     width: fit-content;
     font-size: var.$font-size-s;
-    opacity: 0;
-    filter: blur(8px);
-    transform: rotateY(45deg);
+    font-weight: 700;
   }
   &__desc {
+    display: block;
     line-height: 1.4;
+    @include tab {
+      margin-bottom: 2%;
+    }
   }
   &__number {
     position: absolute;
@@ -194,11 +242,9 @@
     color: var.$color-sub;
     line-height: .8;
     z-index: -1;
-  }
-  &__button {
-    position: absolute;
-    top: 5.5416%;
-    right: 0;
+    @include tab {
+      z-index: 1;
+    }
   }
   &__image {
     position: absolute;
@@ -210,7 +256,50 @@
     z-index: 1;
     &.is-show {
       @include show();
-      transform: translateZ(200px);
+    }
+    @include tab {
+      position: static;
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      filter: blur(0);
+    }
+  }
+  &__modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    &.is-modalOpen {
+      visibility: visible;
+      opacity: 1;
+      z-index: 9999;
+    }
+    &.is-modalClose {
+      visibility: hidden;
+      opacity: 0;
+      z-index: -1;
+    }
+    &-content {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      max-width: 80vw;
+      height: fit-content;
+      max-height: 80vh;
+    }
+    &-button {
+      background: var.$color-sub;
+      margin: 20px;
+      &::before {
+        content: none;
+      }
     }
   }
 }
@@ -224,12 +313,22 @@
     grid-template-columns: 74.5455% 1fr;
     grid-template-rows: max-content 1fr;
     column-gap: 1.8182%;
+    @include tab {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      column-gap: 2%;
+    }
   }
   &__title {
     grid-row: 1;
     grid-column: 2;
     align-self: baseline;
     width: 92.6282%;
+    @include tab {
+      grid-row: 1;
+      grid-column: 1;
+      width: 45%
+    }
   }
   &__title text {
     @include svg(128px);
@@ -237,13 +336,22 @@
   &__lead {
     grid-row: 2;
     grid-column: 2;
+    @include tab {
+      grid-row: 2;
+      grid-column: 1;
+      margin-bottom: 2%;
+    }
   }
   &__slide {
     grid-row: 1 / -1;
     grid-column: 1;
+    @include tab {
+      grid-row: 3;
+      grid-column: 1;
+    }
   }
-  &__caption {
-    display: none;
+  &__button {
+    cursor: pointer;
   }
   &__desc {
     position: absolute;
@@ -255,6 +363,19 @@
     line-height: 1.2;
     text-align: right;
     z-index: -1;
+  }
+
+  &__modal {
+    @extend .p-pickup__modal;
+    &.is-modalClose {
+      @extend .is-modalClose;
+    }
+    &-content {
+      @extend .p-pickup__modal-content;
+    }
+    &-button {
+      @extend .p-pickup__modal-button;
+    }
   }
 }
 
@@ -268,14 +389,20 @@
       display: inline-block;
       flex: 1 1 100%;
       height: 1px;
-      background: var.$color-sub2;
+      background: var.$color-sub;
       transform: translateX(7.6336%);
       content: "";
+      @include tab {
+        content: none;
+      }
     }
   }
   &__title svg {
     flex-shrink: 0;
     width: 39.7727%;
+    @include tab {
+      width: 80%;
+    }
   }
   &__title text {
     @include svg(128px);
@@ -283,9 +410,15 @@
   &__contents {
     display: flex;
     justify-content: space-between;
+    @include tab {
+      flex-direction: column;
+    }
   }
   &__lead {
     width: 23.6364%;
+    @include tab {
+      width: 100%;
+    }
   }
   &__images {
     display: grid;
@@ -294,6 +427,27 @@
     gap: 24px;
     width: 68.1818%;
     margin-left: 6.3636%;
+    @include tab {
+      grid-template-columns: repeat(3, auto);
+      gap: 16px;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  &__button {
+    cursor: pointer;
+  }
+  &__modal {
+    @extend .p-pickup__modal;
+    &.is-modalClose {
+      @extend .is-modalClose;
+    }
+    &-content {
+      @extend .p-pickup__modal-content;
+    }
+    &-button {
+      @extend .p-pickup__modal-button;
+    }
   }
 }
 
@@ -304,6 +458,9 @@
     margin-right: var.$margin-negative;
     margin-left: auto;
     margin-bottom: 5.5455%;
+    @include tab {
+      margin-bottom: 3%;
+    }
   }
   &__title {
     font-size: var.$font-size-m;
@@ -317,15 +474,30 @@
     margin: 0 calc(50% - 50vw);
      li {
         width: 33.3333%;
-     }
+     }    
+    @include tab {
+      gap: 16px;
+    }
   }
 }
 
 
 /*-- footer --*/
 .p-footer {
-  &__sleeping-talk text {
-    @include svg(184px);
+  overflow: hidden;
+  color: var.$color-base;
+  &__sleeping-talk {
+    display: flex;
+    white-space: nowrap;
+    gap: 1rem;
+    font-size: var.$font-size-l;
+    color: var.$color-base;
+    text-shadow: -1px -1px 0 var.$color-main, -1px 0 0 var.$color-main, -1px 1px 0 var.$color-main,0 -1px 0 var.$color-main, 0 1px 0 var.$color-main,1px -1px 0 var.$color-main,  1px 0 0 var.$color-main,  1px 1px 0 var.$color-main;
+    animation: marquee 5s linear infinite both;
+    @keyframes marquee {
+      0%   { translate: 0; }
+      100% { translate: calc(-100% - 1rem); }
+    }
   }
   &__copyright {
     margin: 0 1.3889%;
@@ -333,7 +505,6 @@
     text-align: right;
   }
 }
-
 .p-background{
   &__path {
     position: absolute;
@@ -341,17 +512,4 @@
     left: 0;
     width: 100%;
   }
-  // &__images {
-  //   // position: absolute;
-  //   display: flex;
-  //   // top: 0;
-  //   // left: 0;
-  //   gap: 1.8182%;
-  //   div {
-  //     width: calc(180 / 1320 * 100%);
-  //     img {
-  //       filter: grayscale(50%) opacity(.7);
-  //     }
-  //   }
-  // }
 }

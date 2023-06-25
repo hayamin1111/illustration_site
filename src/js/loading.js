@@ -36,7 +36,6 @@ export default () => {
         scrollTrigger: {
           trigger: "#js-mainvisualLead",
           start: "bottom center",
-          markers: true,
         }
       })
       .from(bubble, {xPercent: 100})

@@ -1,29 +1,35 @@
 @use '../../foundation/variable' as var;
+@use '../../foundation/mixin' as *;
 
-.js-trigger.is-show{ 
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+// .js-trigger.is-show{ 
+//   opacity: 0;
+//   transition: opacity 0.3s ease;
+// }
 
-.js-trigger.is-show--done{ 
-  opacity: 1;
-}
-
-.p-main-visual {
-}
+// .js-trigger.is-show--done{ 
+//   opacity: 1;
+// }
 
 .swiper-button-next, 
 .swiper-button-prev {
   top: auto!important;
   bottom: -0.7576%!important;
   right: auto!important;
-  width: 4.2683%!important;;
+  width: 4.2683%!important;
+  @include tab {
+    bottom: -6%!important;
+    width: 12%!important;
+  }
 }
 .swiper-button-prev{
   left: 0!important;
 }
 .swiper-button-next{
   left: 9.9593%!important;
+  @include tab {
+    left: 15%!important;
+
+  }
 }
 .swiper-button-next:after, 
 .swiper-button-prev:after {

@@ -18,5 +18,31 @@ export default () => {
     span.style.transform = `rotate(${degree}deg)`;
     marqueeText.appendChild(span);
   }
+
+  // const footerMarquee = document.getElementById('js-footerMarquee');
+  // const footerMarqueePosX = footerMarquee.getBoundingClientRect().left ;
+  // const windowWidth = window.innerWidth;
+  // if(footerMarqueePosX)
+  // footerMarquee.animate(
+  //   {
+  //     translate: [0, 'calc(-100% - 1rem)']
+  //   },
+  //   {
+  //     duration: 20000,
+  //     iterations: Infinity
+  //   }
+  // );
+
+  // footerMarquee.forEach((marqueeText) => {
+  //   marqueeText.animate(
+  //     {
+  //       translate: [0, 'calc(-100% - 1rem)']
+  //     },
+  //     {
+  //       duration: 20000,
+  //       iterations: Infinity
+  //     }
+  //   );
+  // });
 }
 

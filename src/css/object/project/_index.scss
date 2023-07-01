@@ -487,16 +487,15 @@
   overflow: hidden;
   color: var.$color-base;
   &__sleeping-talk {
+    display: inline-block;
     display: flex;
-    white-space: nowrap;
-    gap: 1rem;
+    // white-space: nowrap;
+    // gap: 1rem;
     font-size: var.$font-size-l;
     color: var.$color-base;
     text-shadow: -1px -1px 0 var.$color-main, -1px 0 0 var.$color-main, -1px 1px 0 var.$color-main,0 -1px 0 var.$color-main, 0 1px 0 var.$color-main,1px -1px 0 var.$color-main,  1px 0 0 var.$color-main,  1px 1px 0 var.$color-main;
-    animation: marquee 5s linear infinite both;
-    @keyframes marquee {
-      0%   { translate: 0; }
-      100% { translate: calc(-100% - 1rem); }
+    span {
+      white-space: nowrap;
     }
   }
   &__copyright {

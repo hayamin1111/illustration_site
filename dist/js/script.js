@@ -11952,7 +11952,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_MotionPathPlugin__WEB
   const loadingStr = "Now Loading...";
   let loadingText = "";
   loadingStr.split('').forEach(e => {
-    loadingText += `<span>${e}</span>`
+    loadingText += `<span>${e}</span>`;
   });
   loadingElm.innerHTML = loadingText;
 
@@ -12032,6 +12032,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+
 /**
  * @descroption 円周上を回る画像
  */
@@ -12053,31 +12059,21 @@ __webpack_require__.r(__webpack_exports__);
     marqueeText.appendChild(span);
   }
 
-  // const footerMarquee = document.getElementById('js-footerMarquee');
-  // const footerMarqueePosX = footerMarquee.getBoundingClientRect().left ;
-  // const windowWidth = window.innerWidth;
-  // if(footerMarqueePosX)
-  // footerMarquee.animate(
-  //   {
-  //     translate: [0, 'calc(-100% - 1rem)']
-  //   },
-  //   {
-  //     duration: 20000,
-  //     iterations: Infinity
-  //   }
-  // );
-
-  // footerMarquee.forEach((marqueeText) => {
-  //   marqueeText.animate(
-  //     {
-  //       translate: [0, 'calc(-100% - 1rem)']
-  //     },
-  //     {
-  //       duration: 20000,
-  //       iterations: Infinity
-  //     }
-  //   );
-  // });
+  const footerMarqueeElm = document.querySelector(".js-footerMarquee");
+  const clone = footerMarqueeElm.innerHTML;
+  const footerMarqueeElmInner = footerMarqueeElm.children[0];
+  footerMarqueeElm.insertAdjacentHTML('beforeend', clone);
+  footerMarqueeElm.insertAdjacentHTML('beforeend', clone);
+  footerMarqueeElm.children[1].setAttribute("aria-hidden", "true");
+  footerMarqueeElm.children[2].setAttribute("aria-hidden", "true");
+  let moveX = 0;
+  setInterval(function() {
+    footerMarqueeElm.style.transform = `translateX(-${moveX}px)`;
+    if(moveX > footerMarqueeElmInner.clientWidth) {
+      moveX = 0;
+    }
+    moveX += 0.2;
+  }, 0);
 });
 
 
@@ -12292,17 +12288,17 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
       amount: 0.6,
     },
   })
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.js-footer', {
-    background: "#0D001A",
-  })
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to('.js-footer', {
-    background: "none",
-    ease: "linear",
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".js-footer",
-    },
-  })
+  // gsap.set('.js-footer', {
+  //   background: "#0D001A",
+  // })
+  // gsap.to('.js-footer', {
+  //   background: "none",
+  //   ease: "linear",
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".js-footer",
+  //   },
+  // })
 });
 
 

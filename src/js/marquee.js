@@ -1,3 +1,7 @@
+import {gsap} from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 /**
  * @descroption 円周上を回る画像
  */
@@ -19,30 +23,20 @@ export default () => {
     marqueeText.appendChild(span);
   }
 
-  // const footerMarquee = document.getElementById('js-footerMarquee');
-  // const footerMarqueePosX = footerMarquee.getBoundingClientRect().left ;
-  // const windowWidth = window.innerWidth;
-  // if(footerMarqueePosX)
-  // footerMarquee.animate(
-  //   {
-  //     translate: [0, 'calc(-100% - 1rem)']
-  //   },
-  //   {
-  //     duration: 20000,
-  //     iterations: Infinity
-  //   }
-  // );
-
-  // footerMarquee.forEach((marqueeText) => {
-  //   marqueeText.animate(
-  //     {
-  //       translate: [0, 'calc(-100% - 1rem)']
-  //     },
-  //     {
-  //       duration: 20000,
-  //       iterations: Infinity
-  //     }
-  //   );
-  // });
+  const footerMarqueeElm = document.querySelector(".js-footerMarquee");
+  const clone = footerMarqueeElm.innerHTML;
+  const footerMarqueeElmInner = footerMarqueeElm.children[0];
+  footerMarqueeElm.insertAdjacentHTML('beforeend', clone);
+  footerMarqueeElm.insertAdjacentHTML('beforeend', clone);
+  footerMarqueeElm.children[1].setAttribute("aria-hidden", "true");
+  footerMarqueeElm.children[2].setAttribute("aria-hidden", "true");
+  let moveX = 0;
+  setInterval(function() {
+    footerMarqueeElm.style.transform = `translateX(-${moveX}px)`;
+    if(moveX > footerMarqueeElmInner.clientWidth) {
+      moveX = 0;
+    }
+    moveX += 0.2;
+  }, 0);
 }
 

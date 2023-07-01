@@ -1009,21 +1009,14 @@ a:hover {
   color: #FAF7FC;
 }
 .p-footer__sleeping-talk {
+  display: inline-block;
   display: flex;
-  white-space: nowrap;
-  gap: 1rem;
   font-size: clamp(48px, 8.8888vw, 128px);
   color: #FAF7FC;
   text-shadow: -1px -1px 0 #0D001A, -1px 0 0 #0D001A, -1px 1px 0 #0D001A, 0 -1px 0 #0D001A, 0 1px 0 #0D001A, 1px -1px 0 #0D001A, 1px 0 0 #0D001A, 1px 1px 0 #0D001A;
-  animation: marquee 5s linear infinite both;
 }
-@keyframes marquee {
-  0% {
-    translate: 0;
-  }
-  100% {
-    translate: calc(-100% - 1rem);
-  }
+.p-footer__sleeping-talk span {
+  white-space: nowrap;
 }
 .p-footer__copyright {
   margin: 0 1.3889%;

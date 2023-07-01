@@ -14,7 +14,7 @@ export default () => {
   const loadingStr = "Now Loading...";
   let loadingText = "";
   loadingStr.split('').forEach(e => {
-    loadingText += `<span>${e}</span>`
+    loadingText += `<span>${e}</span>`;
   });
   loadingElm.innerHTML = loadingText;
 

@@ -111,16 +111,16 @@ export default () => {
       amount: 0.6,
     },
   })
-  gsap.set('.js-footer', {
-    background: "#0D001A",
-  })
-  gsap.to('.js-footer', {
-    background: "none",
-    ease: "linear",
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".js-footer",
-    },
-  })
+  // gsap.set('.js-footer', {
+  //   background: "#0D001A",
+  // })
+  // gsap.to('.js-footer', {
+  //   background: "none",
+  //   ease: "linear",
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".js-footer",
+  //   },
+  // })
 }
 

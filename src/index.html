@@ -36,7 +36,7 @@
         I draw to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
         I draw to unwind.
       </p>
-      <div class="p-mainvisual__image">
+      <div class="p-mainvisual__image" id="js-mainvisualImage">
         <div class="p-mainvisual__marquee" id="js-marquee">Welcome Welcome Welcome Welcome Welcome </div>
       </div>
       <div class="p-mainvisual__background">
@@ -45,7 +45,7 @@
         </svg>
       </div>
       <div class="p-mainvisual__bubble" id="js-bubble01">
-        <img src="./img/mainvisual/img-bubble.png" alt="">
+        <img src="./img/mainvisual/img-bubble.png" alt="Bubble">
       </div>
       <section class="c-section p-pickup" id="js-pickup">
         <h3 class="c-section__title p-pickup__title js-title">
@@ -61,12 +61,12 @@
             <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
             <span class="p-pickup__number">#1</span>
             <span class="p-pickup__image js-pickupImage">
-              <img src="./img/pickup/img-kame.jpg" alt="">
+              <img srcset="./img/pickup/img-thumbnail-outOfWindow-s.jpg 640w, ./img/pickup/img-thumbnail-outOfWindow-m.jpg 1366w" src="./img/pickup/img-thumbnail-outOfWindow-m.jpg" alt="サムネイル：パソコン少年と窓の外の少女">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup01">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img src="./img/pickup/img-kame.jpg" alt=""></div>
+            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-outOfWindow-s.jpg 375w, ./img/pickup/img-outOfWindow-m.jpg 1366w" src="./img/pickup/img-outOfWindow-l.jpg" alt="パソコン少年と窓の外の少女"></div>
           </div>
         </div>
         <div class="p-pickup__content p-pickup__content2 js-pickupContent">
@@ -75,12 +75,12 @@
             <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
             <span class="p-pickup__number">#2</span>
             <span class="p-pickup__image js-pickupImage">
-              <img src="./img/pickup/img-outofwindow.jpg" alt="">
+              <img srcset="./img/pickup/img-thumbnail-engelRoad-s.jpg 640w, ./img/pickup/img-thumbnail-engelRoad-m.jpg 1366w" src="./img/pickup/img-thumbnail-engelRoad-m.jpg" alt="サムネイル：小豆島の海とエンジェルロード">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup02">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img src="./img/pickup/img-outofwindow.jpg" alt=""></div>
+            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-engelRoad-s.jpg 375w, ./img/pickup/img-engelRoad-m.jpg 1366w, ./img/pickup/img-engelRoad-l.jpg 2560w" src="./img/pickup/img-engelRoad-l.jpg" alt="小豆島の海とエンジェルロード"></div>
           </div>
         </div>
         <div class="p-pickup__content p-pickup__content3 js-pickupContent">
@@ -89,12 +89,12 @@
             <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
             <span class="p-pickup__number">#3</span>
             <span class="p-pickup__image js-pickupImage">
-              <img src="./img/pickup/img-engelroad.jpg" alt="">
+              <img srcset="./img/pickup/img-thumbnail-turtle-s.jpg 640w, ./img/pickup/img-thumbnail-turtle-m.jpg 1366w" src="./img/pickup/img-thumbnail-turtle-m.jpg" alt="サムネイル：巨大亀と甲羅のお城">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup03">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img src="./img/pickup/img-engelroad.jpg" alt=""></div>
+            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-turtle-s.jpg 375w, ./img/pickup/img-turtle-m.jpg 1366w, ./img/pickup/img-turtle-l.jpg 2560w" src="./img/pickup/img-turtle-l.jpg" alt="巨大亀と甲羅のお城"></div>
           </div>
         </div>
       </section>
@@ -112,19 +112,25 @@
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart01"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart01"><img srcset="./img/fun-art/img-thumbnail-geralt-s.jpg 320w, ./img/fun-art/img-thumbnail-geralt-m.jpg 768w" src="./img/fun-art/img-thumbnail-geralt-m.jpg" alt="" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart02"><img src="./img/fun-art/img-gralt01.jpg" alt=""></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart02"><img srcset="./img/fun-art/img-thumbnail-tachikoma-s.jpg 320w, ./img/fun-art/img-thumbnail-tachikoma-m.jpg 768w" src="./img/fun-art/img-thumbnail-tachikoma-m.jpg" alt="" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart03"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart03"><img srcset="./img/fun-art/img-thumbnail-draemon01-s.jpg 320w, ./img/fun-art/img-thumbnail-draemon01-m.jpg 768w" src="./img/fun-art/img-thumbnail-draemon01-m.jpg" alt="" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart04"><img src="./img/fun-art/img-gralt01.jpg" alt=""></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart04"><img  srcset="./img/fun-art/img-thumbnail-draemon02-s.jpg 320w, ./img/fun-art/img-thumbnail-draemon02-m.jpg 768w" src="./img/fun-art/img-thumbnail-draemon02-m.jpg" alt="" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart05"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart05"><img  srcset="./img/fun-art/img-thumbnail-htmlCss-s.jpg 320w, ./img/fun-art/img-thumbnail-htmlCss-m.jpg 768w" src="./img/fun-art/img-thumbnail-htmlCss-m.jpg" alt="" width="300" height="600"></button>
+                </div>
+                <div class="swiper-slide">
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart06"><img  srcset="./img/fun-art/img-thumbnail-kindleboy-s.jpg 320w, ./img/fun-art/img-thumbnail-kindleboy-m.jpg 768w" src="./img/fun-art/img-thumbnail-kindleboy-m.jpg" alt="" width="300" height="600"></button>
+                </div>
+                <div class="swiper-slide">
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart07"><img  srcset="./img/fun-art/img-thumbnail-alice-s.jpg 320w, ./img/fun-art/img-thumbnail-alice-m.jpg 768w" src="./img/fun-art/img-thumbnail-alice-m.jpg" alt="" width="300" height="600"></button>
                 </div>
               </div>
             </div>
@@ -132,23 +138,31 @@
             <div class="swiper-button-next"></div>
             <div class="p-funart__modal js-modal" id="modalFunart01">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-geralt-s.jpg 375w, ./img/fun-art/img-geralt-m.jpg 1366w, ./img/fun-art/img-geralt-l.jpg 2560w" src="./img/fun-art/img-geralt-l.jpg" alt="ゲラルト・オブ・リヴィア"></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart02">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img src="./img/fun-art/img-gralt01.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-tachikoma-s.jpg 375w, ./img/fun-art/img-tachikoma-m.jpg 1366w, ./img/fun-art/img-tachikoma-l.jpg 2560w" src="./img/fun-art/img-tachikoma-l.jpg" alt=""></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart03">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-draemon01-s.jpg 375w, ./img/fun-art/img-draemon01-m.jpg 1366w, ./img/fun-art/img-draemon01-l.jpg 2560w" src="./img/fun-art/img-draemon01-l.jpg" alt=""></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart04">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img src="./img/fun-art/img-gralt01.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-draemon02-s.jpg 375w, ./img/fun-art/img-draemon02-m.jpg 1366w, ./img/fun-art/img-draemon02-l.jpg 2560w" src="./img/fun-art/img-draemon02-l.jpg" alt=""></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart05">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img src="./img/fun-art/img-tachikoma01.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-htmlCss-s.jpg 375w, ./img/fun-art/img-htmlCss-m.jpg 1366w, ./img/fun-art/img-htmlCss-l.jpg 2560w" src="./img/fun-art/img-htmlCss-l.jpg" alt=""></div>
+            </div>
+            <div class="p-funart__modal js-modal" id="modalFunart06">
+              <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-kindleboy-s.jpg 375w, ./img/fun-art/img-kindleboy-m.jpg 1366w, ./img/fun-art/img-kindleboy-l.jpg 2560w" src="./img/fun-art/img-kindleboy-l.jpg" alt=""></div>
+            </div>
+            <div class="p-funart__modal js-modal" id="modalFunart07">
+              <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
+              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-alice-s.jpg 375w, ./img/fun-art/img-alice-m.jpg 1366w, ./img/fun-art/img-alice-l.jpg 2560w" src="./img/fun-art/img-alice-l.jpg" alt=""></div>
             </div>
           </div>
         </div>
@@ -169,76 +183,58 @@
           <ul class="p-handdrawn__images">
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn01">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-julian-s.jpg 320w, ./img/hand-drawn/img-thumbnail-julian-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-julian-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn02">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-house02-s.jpg 320w, ./img/hand-drawn/img-thumbnail-house02-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-house02-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn03">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-house01-s.jpg 320w, ./img/hand-drawn/img-thumbnail-house01-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-house01-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn04">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-city-s.jpg 320w, ./img/hand-drawn/img-thumbnail-city-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-city-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn05">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-alice01-s.jpg 320w, ./img/hand-drawn/img-thumbnail-alice01-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-alice01-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn06">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
-              </button>
-            </li>
-            <li>
-              <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn07">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
-              </button>
-            </li>
-            <li>
-              <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn08">
-                <img src="./img/hand-drawn/img-julian.jpg" alt="" class="js-handdrawnImage">
+                <img srcset="./img/hand-drawn/img-thumbnail-alice02-s.jpg 320w, ./img/hand-drawn/img-thumbnail-alice02-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-alice02-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
           </ul>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn01">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-julian-s.jpg 375w, ./img/hand-drawn/img-julian-m.jpg 1366w, ./img/hand-drawn/img-julian-l.jpg 2560w" src="./img/hand-drawn/img-julian-l.jpg" alt=""></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn02">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-house02-s.jpg 375w, ./img/hand-drawn/img-house02-m.jpg 1366w, ./img/hand-drawn/img-house02-l.jpg 2560w" src="./img/hand-drawn/img-house02-l.jpg" alt=""></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn03">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-house01-s.jpg 375w, ./img/hand-drawn/img-house01-m.jpg 1366w, ./img/hand-drawn/img-house01-l.jpg 2560w" src="./img/hand-drawn/img-house01-l.jpg" alt=""></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn04">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-city-s.jpg 375w, ./img/hand-drawn/img-city-m.jpg 1366w, ./img/hand-drawn/img-city-l.jpg 2560w" src="./img/hand-drawn/img-city-l.jpg" alt=""></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn05">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-alice01-s.jpg 375w, ./img/hand-drawn/img-alice01-m.jpg 1366w, ./img/hand-drawn/img-alice01-l.jpg 2560w" src="./img/hand-drawn/img-alice01-l.jpg" alt=""></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn06">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
-          </div>
-          <div class="p-handdrawn__modal js-modal" id="modalHanddrawn07">
-            <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
-          </div>
-          <div class="p-handdrawn__modal js-modal" id="modalHanddrawn08">
-            <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img src="./img/hand-drawn/img-hei.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-alice02-s.jpg 375w, ./img/hand-drawn/img-alice02-m.jpg 1366w, ./img/hand-drawn/img-alice02-l.jpg 2560w" src="./img/hand-drawn/img-alice02-l.jpg" alt=""></div>
           </div>
         </div>
       </section>
@@ -248,10 +244,43 @@
           <p class="p-flowers__lead">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.z</p>
         </div>
         <ul class="p-flowers__images js-flowersImages">
-          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
-          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
-          <li><img src="./img/flowers/img-flower01.jpg" alt=""></li>
+          <li>
+            <button class="p-flowers__button js-modalButton" data-modal="modalFlowers01">
+              <img srcset="./img/flowers/img-thumbnail-sfsb-s.jpg 320w, ./img/flowers/img-thumbnail-sfsb-m.jpg 768w" src="./img/flowers/img-thumbnail-sfsb-m.jpg" alt="たくさんの花とSo Many Flowers, So Many Beauties.の文字" class="js-flowersImage" width="200" height="400">
+            </button>
+          </li>
+          <li>
+            <button class="p-flowers__button js-modalButton" data-modal="modalFlowers02">
+              <img srcset="./img/flowers/img-thumbnail-flowers-s.jpg 320w, ./img/flowers/img-thumbnail-flowers-m.jpg 768w"  src="./img/flowers/img-thumbnail-flowers-m.jpg" alt="デジタルで書かれたたくさんの花" class="js-flowersImage" width="200" height="400">
+            </button>
+          </li>
+          <li>
+            <button class="p-flowers__button js-modalButton" data-modal="modalFlowers03">
+              <img srcset="./img/flowers/img-thumbnail-rose-s.jpg 320w, ./img/flowers/img-thumbnail-rose-m.jpg 768w"  src="./img/flowers/img-thumbnail-rose-m.jpg" alt="バラの花" class="js-flowersImage" width="200" height="400">
+            </button>
+          </li>
+          <li>
+            <button class="p-flowers__button js-modalButton" data-modal="modalFlowers04">
+              <img srcset="./img/flowers/img-thumbnail-summer-s.jpg 320w, ./img/flowers/img-thumbnail-summer-m.jpg 768w"  src="./img/flowers/img-thumbnail-summer-m.jpg" alt="夏の花" class="js-flowersImage" width="200" height="400">
+            </button>
+          </li>
         </ul>
+        <div class="p-flowers__modal js-modal" id="modalFlowers01">
+          <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
+          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-sfsb-s.jpg 375w, ./img/flowers/img-sfsb-m.jpg 1366w, ./img/flowers/img-sfsb-l.jpg 2560w" src="./img/flowers/img-sfsb-l.jpg" alt="たくさんの花とSo Many Flowers, So Many Beauties.の文字"></div>
+        </div>
+        <div class="p-flowers__modal js-modal" id="modalFlowers02">
+          <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
+          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-flowers-s.jpg 375w, ./img/flowers/img-flowers-m.jpg 1366w, ./img/flowers/img-flowers-l.jpg 2560w" src="./img/flowers/img-flowers-l.jpg" alt="デジタルで書かれたたくさんの花"></div>
+        </div>
+        <div class="p-flowers__modal js-modal" id="modalFlowers03">
+          <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
+          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-rose-s.jpg 375w, ./img/flowers/img-rose-m.jpg 1366w, ./img/flowers/img-rose-l.jpg 2560w" src="./img/flowers/img-rose-l.jpg" alt="バラの花"></div>
+        </div>
+        <div class="p-flowers__modal js-modal" id="modalFlowers04">
+          <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
+          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-summer-s.jpg 375w, ./img/flowers/img-summer-m.jpg 1366w, ./img/flowers/img-summer-l.jpg 2560w" src="./img/flowers/img-summer-l.jpg" alt="夏の花"></div>
+        </div>
       </section>
     </section>
   </main>
@@ -260,9 +289,6 @@
   <footer class="l-footer">
     <div class="l-footer__contents">
       <p class="l-footer__inner p-footer__sleeping-talk js-footerMarquee">
-        <!-- <span class="p-footer__sleeping-talk-inner01"> -->
-          <!-- My daydream continue... -->
-        <!-- </span> -->
         <span>
           My daydream continue...
         </span>

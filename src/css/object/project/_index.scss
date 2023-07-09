@@ -95,7 +95,7 @@
     aspect-ratio: 1 / 1;
     transform: translate(-50%, -50%);
     mix-blend-mode: exclusion;
-    color: #fff;
+    color: var.$color-sub;
     animation: rotateMarquee 20s infinite linear;
     @include hide(5px, .5s, 1s);
     &.is-done {
@@ -291,8 +291,18 @@
       margin: auto;
       width: fit-content;
       max-width: 80vw;
-      height: fit-content;
+      height: 100%;
       max-height: 80vh;
+      img {
+        width: auto;
+        height: 100%;
+      }
+      @include tab {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
     &-button {
       background: var.$color-sub;
@@ -422,13 +432,12 @@
   }
   &__images {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     grid-auto-rows: auto;
     gap: 24px;
     width: 68.1818%;
     margin-left: 6.3636%;
     @include tab {
-      grid-template-columns: repeat(3, auto);
       gap: 16px;
       width: 100%;
       margin-left: 0;
@@ -473,10 +482,25 @@
     gap: 24px;
     margin: 0 calc(50% - 50vw);
      li {
-        width: 33.3333%;
+        width: 25%;
      }    
     @include tab {
       gap: 16px;
+    }
+  }
+  &__button {
+    cursor: pointer;
+  }
+  &__modal {
+    @extend .p-pickup__modal;
+    &.is-modalClose {
+      @extend .is-modalClose;
+    }
+    &-content {
+      @extend .p-pickup__modal-content;
+    }
+    &-button {
+      @extend .p-pickup__modal-button;
     }
   }
 }
@@ -489,8 +513,7 @@
   &__sleeping-talk {
     display: inline-block;
     display: flex;
-    // white-space: nowrap;
-    // gap: 1rem;
+    gap: 1rem;
     font-size: var.$font-size-l;
     color: var.$color-base;
     text-shadow: -1px -1px 0 var.$color-main, -1px 0 0 var.$color-main, -1px 1px 0 var.$color-main,0 -1px 0 var.$color-main, 0 1px 0 var.$color-main,1px -1px 0 var.$color-main,  1px 0 0 var.$color-main,  1px 1px 0 var.$color-main;

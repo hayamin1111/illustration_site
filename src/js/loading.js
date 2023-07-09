@@ -35,13 +35,13 @@ export default () => {
   gsap.timeline({
         scrollTrigger: {
           trigger: "#js-mainvisualLead",
-          start: "bottom center",
+          start: "bottom 60%",
         }
       })
       .from(bubble, {xPercent: 100})
       .to(bubble, {
         ease: 'linear',
-        duration: 10,
+        duration: 6,
         motionPath: {
           path: '#bubblepath',
           align: '#bubblepath',

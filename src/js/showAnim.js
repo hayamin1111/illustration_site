@@ -24,26 +24,11 @@ export default () => {
           let centerPointX = cursorX - image.clientWidth / 2;
           let centerPointY = cursorY - image.clientHeight / 2;
           image.classList.add('is-show');
-
           gsap.set(image, { x: centerPointX, y: centerPointY });
-          gsap.to(image, {
-            duration: .3,
-            autoAlpha: 1,
-            skewX: 0,
-            ease: Power4.out,
-          })
         }
       }
       function mouseLeaveHandler(e) {
         let image = this.querySelector('.js-pickupImage');
-        if(image.classList.contains('is-show')) {
-          gsap.to(image, {
-            duration: .3,
-            autoAlpha: 0,
-            skewX: -30,
-            ease: Power4.out,
-          })
-        }
         image.classList.remove('is-show');
       }
       function mouseMoveHandler(e) {

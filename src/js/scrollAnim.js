@@ -6,6 +6,18 @@ gsap.registerPlugin(ScrollTrigger);
  * @descroption スクロールアニメーション
  */
 export default () => {
+  gsap.set('#js-mainvisualImage', {
+    scale: 1.4,
+  })
+  gsap.to('#js-mainvisualImage', {
+    scale: 1,
+    ease: Power4.out,
+    duration: .8,
+    scrollTrigger: {
+      trigger: "#js-mainvisualImage",
+      start: "top 80%",
+    },
+  })
   const titles = document.querySelectorAll('.js-title');
   titles.forEach((title) => {
     gsap.set(title, {
@@ -111,16 +123,5 @@ export default () => {
       amount: 0.6,
     },
   })
-  // gsap.set('.js-footer', {
-  //   background: "#0D001A",
-  // })
-  // gsap.to('.js-footer', {
-  //   background: "none",
-  //   ease: "linear",
-  //   duration: 1,
-  //   scrollTrigger: {
-  //     trigger: ".js-footer",
-  //   },
-  // })
 }
 

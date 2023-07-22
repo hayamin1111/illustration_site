@@ -82,7 +82,13 @@
     margin-right: var.$margin-negative;
     margin-left: auto;
     margin-bottom: 10.6061%;
-    background: url(../../../img/mainvisual/img-cybercity.jpg) right bottom / contain no-repeat;
+    // background: url(../../../img/mainvisual/img-cybercity.jpg) right bottom / contain no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../../../img/mainvisual/img-cybercity-m.jpg);
+    background-image: image-set(url(../../../img/mainvisual/img-cybercity-m.jpg) 1x, url(../../../img/mainvisual/img-cybercity-l.jpg) 2x);
+    background-image: -webkit-image-set(url(../../../img/mainvisual/img-cybercity-m.jpg) 1x, url(../../../img/mainvisual/img-cybercity-l.jpg) 2x);
     @include tab {
       width: 90%;
     }

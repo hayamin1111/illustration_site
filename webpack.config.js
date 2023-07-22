@@ -5,7 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  devtool: 'source-map',
+  // devtool: 'source-map',
   entry: './src/js/script.js',
   output: {
     clean: true,
@@ -23,7 +23,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true,
+              // sourceMap: true,
             },
           },
           {

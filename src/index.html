@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Daydream | HYKW</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +16,7 @@
   <meta name="twitter:card" content="large">
   <meta name="twitter:site" content="">
   <meta property="og:locale" content="ja_JP">
-  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
 </head>
 <body id="body">
   <header class="l-header c-inner"><h1 class="l-header__logo">HYKW</h1></header>
@@ -28,16 +27,14 @@
         The Daydream
       </h2>
       <p class="p-mainvisual__lead" id="js-mainvisualLead">
-        This web site is HYKW’s daydream. Everyone has fantasies, don't they?I draw to unwind. This we<br>
-        b site is HYKW’s daydream. Everyone has fantasies, don't they?I draw to unwind. This web<br>
-        site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
-        I draw to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?I draw<br>
-        to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
-        I draw to unwind. This web site is HYKW’s daydream. Everyone has fantasies, don't they?<br>
-        I draw to unwind.
+        This web site is Hayakawa's illustrations site.<br>
+        You can see the illustrations I drew as a hobby.<br>
+        I'm trying hand-drawn, watercolors as well as digital.<br>
+        For digital illustration, I mainly use Procreate.<br>
+        I hope you will take a look at them.<br>
       </p>
       <div class="p-mainvisual__image" id="js-mainvisualImage">
-        <div class="p-mainvisual__marquee" id="js-marquee">Welcome Welcome Welcome Welcome Welcome </div>
+        <div class="p-mainvisual__marquee" id="js-marquee" aria-hidden="true">Welcome Welcome Welcome Welcome Welcome </div>
       </div>
       <div class="p-mainvisual__background">
         <svg viewBox="0 0 1444 1028" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,7 +42,7 @@
         </svg>
       </div>
       <div class="p-mainvisual__bubble" id="js-bubble01">
-        <img src="./img/mainvisual/img-bubble.png" alt="Bubble">
+        <img src="<%= require('./img/mainvisual/img-bubble.png') %>" alt="Bubble">
       </div>
       <section class="c-section p-pickup" id="js-pickup">
         <h3 class="c-section__title p-pickup__title js-title">
@@ -57,44 +54,44 @@
         </h3>
         <div class="p-pickup__content p-pickup__content1 js-pickupContent">
           <button class="p-pickup__button js-modalButton" data-modal="modalPickup01">
-            <span class="p-pickup__subtitle js-pickupSubtitle">Doraemon</span>
-            <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
+            <span class="p-pickup__subtitle js-pickupSubtitle">The World Outside the Window</span>
+            <span class="p-pickup__desc js-pickupDesc">This is an illustration of a boy who stays indoors and a girl who innocently plays under the blue sky. The contrast between the indoor and outdoor areas was painted with an awareness of the contrast between the two. The girl doesn't know the boy, but the boy knew the girl and even tried to sneak a gift to her. That dream didn't come true, but today the boy still thinks of the girl.</span>
             <span class="p-pickup__number">#1</span>
             <span class="p-pickup__image js-pickupImage">
-              <img srcset="./img/pickup/img-thumbnail-outOfWindow-s.jpg 640w, ./img/pickup/img-thumbnail-outOfWindow-m.jpg 1366w" src="./img/pickup/img-thumbnail-outOfWindow-m.jpg" alt="サムネイル：パソコン少年と窓の外の少女">
+              <img srcset="<%= require('./img/pickup/img-thumbnail-outOfWindow-s.jpg') %> 640w, <%= require('./img/pickup/img-thumbnail-outOfWindow-m.jpg') %> 1366w" src="<%= require('./img/pickup/img-thumbnail-outOfWindow-m.jpg') %>"alt="Thumbnail:The World Outside the Window">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup01">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-outOfWindow-s.jpg 375w, ./img/pickup/img-outOfWindow-m.jpg 1366w" src="./img/pickup/img-outOfWindow-l.jpg" alt="パソコン少年と窓の外の少女"></div>
+            <div class="p-pickup__modal-content"><img srcset="<%= require('./img/pickup/img-outOfWindow-s.jpg') %> 375w, <%= require('./img/pickup/img-outOfWindow-m.jpg') %> 1366w" src="<%= require('./img/pickup/img-outOfWindow-l.jpg') %>"alt="The World Outside the Window. A computer boy and a girl playing outside"></div>
           </div>
         </div>
         <div class="p-pickup__content p-pickup__content2 js-pickupContent">
           <button class="p-pickup__button js-modalButton" data-modal="modalPickup02">
-            <span class="p-pickup__subtitle js-title">Geralt of rivia</span>
-            <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
+            <span class="p-pickup__subtitle js-title">Angel Road in Shodoshima</span>
+            <span class="p-pickup__desc js-pickupDesc">This illustration was drawn with Angel Road on Shodoshima as the motif. Angel Road is a sand road that appears at low tide on Shodoshima in Kagawa Prefecture. It is said that if you cross this path hand in hand with your loved one, your wish will come true. What is the boy doing here?</span>
             <span class="p-pickup__number">#2</span>
             <span class="p-pickup__image js-pickupImage">
-              <img srcset="./img/pickup/img-thumbnail-engelRoad-s.jpg 640w, ./img/pickup/img-thumbnail-engelRoad-m.jpg 1366w" src="./img/pickup/img-thumbnail-engelRoad-m.jpg" alt="サムネイル：小豆島の海とエンジェルロード">
+              <img srcset="<%= require('./img/pickup/img-thumbnail-engelRoad-s.jpg') %> 640w, <%= require('./img/pickup/img-thumbnail-engelRoad-m.jpg') %> 1366w" src="<%= require('./img/pickup/img-thumbnail-engelRoad-m.jpg') %>"alt="thumbnail:Angel Road in Shodoshima">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup02">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-engelRoad-s.jpg 375w, ./img/pickup/img-engelRoad-m.jpg 1366w, ./img/pickup/img-engelRoad-l.jpg 2560w" src="./img/pickup/img-engelRoad-l.jpg" alt="小豆島の海とエンジェルロード"></div>
+            <div class="p-pickup__modal-content"><img srcset="<%= require('./img/pickup/img-engelRoad-s.jpg') %> 375w, <%= require('./img/pickup/img-engelRoad-m.jpg') %> 1366w, <%= require('./img/pickup/img-engelRoad-l.jpg') %> 2560w" src="<%= require('./img/pickup/img-engelRoad-l.jpg') %>"alt="Angel Road in Shodoshima"></div>
           </div>
         </div>
         <div class="p-pickup__content p-pickup__content3 js-pickupContent">
           <button class="p-pickup__button js-modalButton" data-modal="modalPickup03">
-            <span class="p-pickup__subtitle js-pickupSubtitle">Dekai kame</span>
-            <span class="p-pickup__desc js-pickupDesc">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare atSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at</span>
+            <span class="p-pickup__subtitle js-pickupSubtitle">Giant Turtle and Castle</span>
+            <span class="p-pickup__desc js-pickupDesc">This is an illustration of a giant turtle and the castle on his shell. He travels to different places with a heavy castle on his back. He's looking for someone. Who is it?<br>By the way, a certain well-known person is hidden in this illustration. Try to find him.</span>
             <span class="p-pickup__number">#3</span>
             <span class="p-pickup__image js-pickupImage">
-              <img srcset="./img/pickup/img-thumbnail-turtle-s.jpg 640w, ./img/pickup/img-thumbnail-turtle-m.jpg 1366w" src="./img/pickup/img-thumbnail-turtle-m.jpg" alt="サムネイル：巨大亀と甲羅のお城">
+              <img srcset="<%= require('./img/pickup/img-thumbnail-turtle-s.jpg') %> 640w, <%= require('./img/pickup/img-thumbnail-turtle-m.jpg') %> 1366w" src="<%= require('./img/pickup/img-thumbnail-turtle-m.jpg') %>"alt="Thumbnail:Giant turtle and castle">
             </span>
           </button>
           <div class="p-pickup__modal js-modal" id="modalPickup03">
             <button class="c-button p-pickup__modal-button js-modalButtonClose">Close</button>
-            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-turtle-s.jpg 375w, ./img/pickup/img-turtle-m.jpg 1366w, ./img/pickup/img-turtle-l.jpg 2560w" src="./img/pickup/img-turtle-l.jpg" alt="巨大亀と甲羅のお城"></div>
+            <div class="p-pickup__modal-content"><img srcset="./img/pickup/img-turtle-s.jpg 375w, <%= require('./img/pickup/img-turtle-m.jpg') %> 1366w, <%= require('./img/pickup/img-turtle-l.jpg') %> 2560w" src="<%= require('./img/pickup/img-turtle-l.jpg') %>"alt="Giant turtle and castle"></div>
           </div>
         </div>
       </section>
@@ -107,30 +104,30 @@
               </text>
             </svg>
           </h3>
-          <p class="p-funart__lead js-funartLead">Somewhere else that i dont know</p>
+          <p class="p-funart__lead js-funartLead">This is fan art of my favorite anime, games, etc.</p>
           <div class="p-funart__slide js-funartSlide">
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart01"><img srcset="./img/fun-art/img-thumbnail-geralt-s.jpg 320w, ./img/fun-art/img-thumbnail-geralt-m.jpg 768w" src="./img/fun-art/img-thumbnail-geralt-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart01"><img srcset="<%= require('./img/fun-art/img-thumbnail-geralt-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-geralt-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-geralt-m.jpg') %>" alt="Thumbnail:Geralt of Rivia from Wither3" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart02"><img srcset="./img/fun-art/img-thumbnail-tachikoma-s.jpg 320w, ./img/fun-art/img-thumbnail-tachikoma-m.jpg 768w" src="./img/fun-art/img-thumbnail-tachikoma-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart02"><img srcset="<%= require('./img/fun-art/img-thumbnail-tachikoma-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-tachikoma-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-tachikoma-m.jpg') %>" alt="Thumbnail:Tachikoma from Ghost in the Shell" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart03"><img srcset="./img/fun-art/img-thumbnail-draemon01-s.jpg 320w, ./img/fun-art/img-thumbnail-draemon01-m.jpg 768w" src="./img/fun-art/img-thumbnail-draemon01-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart03"><img srcset="<%= require('./img/fun-art/img-thumbnail-draemon01-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-draemon01-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-draemon01-m.jpg') %>" alt="Thumbnail:Doraemon traveling through the ruins. Ancient battlefield." width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart04"><img  srcset="./img/fun-art/img-thumbnail-draemon02-s.jpg 320w, ./img/fun-art/img-thumbnail-draemon02-m.jpg 768w" src="./img/fun-art/img-thumbnail-draemon02-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart04"><img  srcset="<%= require('./img/fun-art/img-thumbnail-draemon02-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-draemon02-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-draemon02-m.jpg') %>" alt="Thumbnail:Doraemon traveling through the ruins. Deep in the Jungle." width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart05"><img  srcset="./img/fun-art/img-thumbnail-htmlCss-s.jpg 320w, ./img/fun-art/img-thumbnail-htmlCss-m.jpg 768w" src="./img/fun-art/img-thumbnail-htmlCss-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart05"><img  srcset="<%= require('./img/fun-art/img-thumbnail-htmlCss-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-htmlCss-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-htmlCss-m.jpg') %>" alt="Thumbnail:Historic ruins of HTML5&amp;CSS3" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart06"><img  srcset="./img/fun-art/img-thumbnail-kindleboy-s.jpg 320w, ./img/fun-art/img-thumbnail-kindleboy-m.jpg 768w" src="./img/fun-art/img-thumbnail-kindleboy-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart06"><img  srcset="<%= require('./img/fun-art/img-thumbnail-kindleboy-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-kindleboy-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-kindleboy-m.jpg') %>" alt="Thumbnail:That view you see on kindle" width="300" height="600"></button>
                 </div>
                 <div class="swiper-slide">
-                  <button class="p-funart__button js-modalButton" data-modal="modalFunart07"><img  srcset="./img/fun-art/img-thumbnail-alice-s.jpg 320w, ./img/fun-art/img-thumbnail-alice-m.jpg 768w" src="./img/fun-art/img-thumbnail-alice-m.jpg" alt="" width="300" height="600"></button>
+                  <button class="p-funart__button js-modalButton" data-modal="modalFunart07"><img  srcset="<%= require('./img/fun-art/img-thumbnail-alice-s.jpg') %> 320w, <%= require('./img/fun-art/img-thumbnail-alice-m.jpg') %> 768w" src="<%= require('./img/fun-art/img-thumbnail-alice-m.jpg') %>" alt="Thumbnail:Alice and rabbit in the sacred forest" width="300" height="600"></button>
                 </div>
               </div>
             </div>
@@ -138,35 +135,35 @@
             <div class="swiper-button-next"></div>
             <div class="p-funart__modal js-modal" id="modalFunart01">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-geralt-s.jpg 375w, ./img/fun-art/img-geralt-m.jpg 1366w, ./img/fun-art/img-geralt-l.jpg 2560w" src="./img/fun-art/img-geralt-l.jpg" alt="ゲラルト・オブ・リヴィア"></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-geralt-s.jpg') %> 375w, <%= require('./img/fun-art/img-geralt-m.jpg') %> 1366w, <%= require('./img/fun-art/img-geralt-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-geralt-l.jpg') %>" alt="Geralt of Rivia from Wither3"></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart02">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-tachikoma-s.jpg 375w, ./img/fun-art/img-tachikoma-m.jpg 1366w, ./img/fun-art/img-tachikoma-l.jpg 2560w" src="./img/fun-art/img-tachikoma-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-tachikoma-s.jpg') %> 375w, <%= require('./img/fun-art/img-tachikoma-m.jpg') %> 1366w, <%= require('./img/fun-art/img-tachikoma-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-tachikoma-l.jpg') %>" alt="Tachikoma from Ghost in the Shell"></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart03">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-draemon01-s.jpg 375w, ./img/fun-art/img-draemon01-m.jpg 1366w, ./img/fun-art/img-draemon01-l.jpg 2560w" src="./img/fun-art/img-draemon01-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-draemon01-s.jpg') %> 375w, <%= require('./img/fun-art/img-draemon01-m.jpg') %> 1366w, <%= require('./img/fun-art/img-draemon01-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-draemon01-l.jpg') %>" alt="Doraemon traveling through the ruins. Ancient battlefield."></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart04">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-draemon02-s.jpg 375w, ./img/fun-art/img-draemon02-m.jpg 1366w, ./img/fun-art/img-draemon02-l.jpg 2560w" src="./img/fun-art/img-draemon02-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-draemon02-s.jpg') %> 375w, <%= require('./img/fun-art/img-draemon02-m.jpg') %> 1366w, <%= require('./img/fun-art/img-draemon02-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-draemon02-l.jpg') %>" alt="Doraemon traveling through the ruins. Deep in the Jungle."></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart05">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-htmlCss-s.jpg 375w, ./img/fun-art/img-htmlCss-m.jpg 1366w, ./img/fun-art/img-htmlCss-l.jpg 2560w" src="./img/fun-art/img-htmlCss-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-htmlCss-s.jpg') %> 375w, <%= require('./img/fun-art/img-htmlCss-m.jpg') %> 1366w, <%= require('./img/fun-art/img-htmlCss-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-htmlCss-l.jpg') %>" alt="Historic ruins of HTML5&amp;CSS3"></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart06">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-kindleboy-s.jpg 375w, ./img/fun-art/img-kindleboy-m.jpg 1366w, ./img/fun-art/img-kindleboy-l.jpg 2560w" src="./img/fun-art/img-kindleboy-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-kindleboy-s.jpg') %> 375w, <%= require('./img/fun-art/img-kindleboy-m.jpg') %> 1366w, <%= require('./img/fun-art/img-kindleboy-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-kindleboy-l.jpg') %>" alt="That view you see on kindle"></div>
             </div>
             <div class="p-funart__modal js-modal" id="modalFunart07">
               <button class="c-button p-funart__modal-button js-modalButtonClose">Close</button>
-              <div class="p-funart__modal-content"><img srcset="./img/fun-art/img-alice-s.jpg 375w, ./img/fun-art/img-alice-m.jpg 1366w, ./img/fun-art/img-alice-l.jpg 2560w" src="./img/fun-art/img-alice-l.jpg" alt=""></div>
+              <div class="p-funart__modal-content"><img srcset="<%= require('./img/fun-art/img-alice-s.jpg') %> 375w, <%= require('./img/fun-art/img-alice-m.jpg') %> 1366w, <%= require('./img/fun-art/img-alice-l.jpg') %> 2560w" src="<%= require('./img/fun-art/img-alice-l.jpg') %>" alt="Alice and rabbit in the sacred forest"></div>
             </div>
           </div>
         </div>
-        <p class="p-funart__desc">Dayd ream Daydrea mDaydreamDa ydreamD  aydre amDaydrea mDaydream Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.</p>
+        <p class="p-funart__desc" aria-hidden="true">Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art Fan Art</p>
       </section>
       <section class="c-section p-handdrawn" id="js-handdrawn">
         <h3 class="c-section__title p-handdrawn__title js-title">
@@ -178,108 +175,108 @@
         </h3>
         <div class="p-handdrawn__contents">
           <p class="p-handdrawn__lead">
-            Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.zSomewhere else that idon’t know. Someone stare at  me.
+            Hand drawn illustrations.<br>I use ballpoint pens and watercolors.
           </p>
           <ul class="p-handdrawn__images">
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn01">
-                <img srcset="./img/hand-drawn/img-thumbnail-julian-s.jpg 320w, ./img/hand-drawn/img-thumbnail-julian-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-julian-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-julian-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-julian-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-julian-m.jpg') %>" alt="Thumbnail:Julian. My dear friend's family." class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn02">
-                <img srcset="./img/hand-drawn/img-thumbnail-house02-s.jpg 320w, ./img/hand-drawn/img-thumbnail-house02-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-house02-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-house02-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-house02-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-house02-m.jpg') %>" alt="Thumbnail:A building that looks like a church somewhere." class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn03">
-                <img srcset="./img/hand-drawn/img-thumbnail-house01-s.jpg 320w, ./img/hand-drawn/img-thumbnail-house01-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-house01-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-house01-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-house01-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-house01-m.jpg') %>" alt="Thumbnail:House of Japanese style" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn04">
-                <img srcset="./img/hand-drawn/img-thumbnail-city-s.jpg 320w, ./img/hand-drawn/img-thumbnail-city-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-city-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-city-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-city-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-city-m.jpg') %>" alt="Thumbnail:Scenery of some town" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn05">
-                <img srcset="./img/hand-drawn/img-thumbnail-alice01-s.jpg 320w, ./img/hand-drawn/img-thumbnail-alice01-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-alice01-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-alice01-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-alice01-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-alice01-m.jpg') %>" alt="Thumbnail:Alice and rabbit heading to town" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
             <li>
               <button class="p-handdrawn__button js-modalButton" data-modal="modalHanddrawn06">
-                <img srcset="./img/hand-drawn/img-thumbnail-alice02-s.jpg 320w, ./img/hand-drawn/img-thumbnail-alice02-m.jpg 768w"  src="./img/hand-drawn/img-thumbnail-alice02-m.jpg" alt="" class="js-handdrawnImage" width="200" height="400">
+                <img srcset="<%= require('./img/hand-drawn/img-thumbnail-alice02-s.jpg') %> 320w, <%= require('./img/hand-drawn/img-thumbnail-alice02-m.jpg') %> 768w"  src="<%= require('./img/hand-drawn/img-thumbnail-alice02-m.jpg') %>" alt="Thumbnail:Alice and the rabbit at the castle gate" class="js-handdrawnImage" width="200" height="400">
               </button>
             </li>
           </ul>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn01">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-julian-s.jpg 375w, ./img/hand-drawn/img-julian-m.jpg 1366w, ./img/hand-drawn/img-julian-l.jpg 2560w" src="./img/hand-drawn/img-julian-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-julian-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-julian-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-julian-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-julian-l.jpg') %>" alt="Julian. My dear friend's family."></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn02">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-house02-s.jpg 375w, ./img/hand-drawn/img-house02-m.jpg 1366w, ./img/hand-drawn/img-house02-l.jpg 2560w" src="./img/hand-drawn/img-house02-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-house02-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-house02-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-house02-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-house02-l.jpg') %>" alt="A building that looks like a church somewhere."></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn03">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-house01-s.jpg 375w, ./img/hand-drawn/img-house01-m.jpg 1366w, ./img/hand-drawn/img-house01-l.jpg 2560w" src="./img/hand-drawn/img-house01-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-house01-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-house01-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-house01-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-house01-l.jpg') %>" alt="House of Japanese style"></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn04">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-city-s.jpg 375w, ./img/hand-drawn/img-city-m.jpg 1366w, ./img/hand-drawn/img-city-l.jpg 2560w" src="./img/hand-drawn/img-city-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-city-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-city-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-city-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-city-l.jpg') %>" alt="Scenery of some town"></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn05">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-alice01-s.jpg 375w, ./img/hand-drawn/img-alice01-m.jpg 1366w, ./img/hand-drawn/img-alice01-l.jpg 2560w" src="./img/hand-drawn/img-alice01-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-alice01-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-alice01-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-alice01-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-alice01-l.jpg') %>" alt="Alice and rabbit heading to town"></div>
           </div>
           <div class="p-handdrawn__modal js-modal" id="modalHanddrawn06">
             <button class="c-button p-handdrawn__modal-button js-modalButtonClose">Close</button>
-            <div class="p-handdrawn__modal-content"><img srcset="./img/hand-drawn/img-alice02-s.jpg 375w, ./img/hand-drawn/img-alice02-m.jpg 1366w, ./img/hand-drawn/img-alice02-l.jpg 2560w" src="./img/hand-drawn/img-alice02-l.jpg" alt=""></div>
+            <div class="p-handdrawn__modal-content"><img srcset="<%= require('./img/hand-drawn/img-alice02-s.jpg') %> 375w, <%= require('./img/hand-drawn/img-alice02-m.jpg') %> 1366w, <%= require('./img/hand-drawn/img-alice02-l.jpg') %> 2560w" src="<%= require('./img/hand-drawn/img-alice02-l.jpg') %>" alt="Alice and the rabbit at the castle gate"></div>
           </div>
         </div>
       </section>
       <section class="c-section p-flowers" id="js-flowers">
         <div class="p-flowers__titles js-title">
           <h3 class="c-section__title p-flowers__title">So Many Flowers, So Many Beauties.</h3>
-          <p class="p-flowers__lead">Somewhere else that i don’t know. Someone stare at  me.zSomewhere else that i don’t know. Someone stare at  me.z</p>
+          <p class="p-flowers__lead">There is as much beauty as the number of flowers. Live your life as you are.</p>
         </div>
         <ul class="p-flowers__images js-flowersImages">
           <li>
             <button class="p-flowers__button js-modalButton" data-modal="modalFlowers01">
-              <img srcset="./img/flowers/img-thumbnail-sfsb-s.jpg 320w, ./img/flowers/img-thumbnail-sfsb-m.jpg 768w" src="./img/flowers/img-thumbnail-sfsb-m.jpg" alt="たくさんの花とSo Many Flowers, So Many Beauties.の文字" class="js-flowersImage" width="200" height="400">
+              <img srcset="<%= require('./img/flowers/img-thumbnail-sfsb-s.jpg') %> 320w, <%= require('./img/flowers/img-thumbnail-sfsb-m.jpg') %> 768w" src="<%= require('./img/flowers/img-thumbnail-sfsb-m.jpg') %>"alt="Thumbnail:So Many Flowers, So Many Beauties." class="js-flowersImage" width="200" height="400">
             </button>
           </li>
           <li>
             <button class="p-flowers__button js-modalButton" data-modal="modalFlowers02">
-              <img srcset="./img/flowers/img-thumbnail-flowers-s.jpg 320w, ./img/flowers/img-thumbnail-flowers-m.jpg 768w"  src="./img/flowers/img-thumbnail-flowers-m.jpg" alt="デジタルで書かれたたくさんの花" class="js-flowersImage" width="200" height="400">
+              <img srcset="<%= require('./img/flowers/img-thumbnail-flowers-s.jpg') %> 320w, <%= require('./img/flowers/img-thumbnail-flowers-m.jpg') %> 768w"  src="<%= require('./img/flowers/img-thumbnail-flowers-m.jpg') %>"alt="Thumbnail:Many flowers written digitally" class="js-flowersImage" width="200" height="400">
             </button>
           </li>
           <li>
             <button class="p-flowers__button js-modalButton" data-modal="modalFlowers03">
-              <img srcset="./img/flowers/img-thumbnail-rose-s.jpg 320w, ./img/flowers/img-thumbnail-rose-m.jpg 768w"  src="./img/flowers/img-thumbnail-rose-m.jpg" alt="バラの花" class="js-flowersImage" width="200" height="400">
+              <img srcset="<%= require('./img/flowers/img-thumbnail-rose-s.jpg') %> 320w, <%= require('./img/flowers/img-thumbnail-rose-m.jpg') %> 768w"  src="<%= require('./img/flowers/img-thumbnail-rose-m.jpg') %>"alt="Thumbnail:Rose" class="js-flowersImage" width="200" height="400">
             </button>
           </li>
           <li>
             <button class="p-flowers__button js-modalButton" data-modal="modalFlowers04">
-              <img srcset="./img/flowers/img-thumbnail-summer-s.jpg 320w, ./img/flowers/img-thumbnail-summer-m.jpg 768w"  src="./img/flowers/img-thumbnail-summer-m.jpg" alt="夏の花" class="js-flowersImage" width="200" height="400">
+              <img srcset="<%= require('./img/flowers/img-thumbnail-summer-s.jpg') %> 320w, <%= require('./img/flowers/img-thumbnail-summer-m.jpg') %> 768w"  src="<%= require('./img/flowers/img-thumbnail-summer-m.jpg') %>"alt="Thumbnail:Summer flowers" class="js-flowersImage" width="200" height="400">
             </button>
           </li>
         </ul>
         <div class="p-flowers__modal js-modal" id="modalFlowers01">
           <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
-          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-sfsb-s.jpg 375w, ./img/flowers/img-sfsb-m.jpg 1366w, ./img/flowers/img-sfsb-l.jpg 2560w" src="./img/flowers/img-sfsb-l.jpg" alt="たくさんの花とSo Many Flowers, So Many Beauties.の文字"></div>
+          <div class="p-flowers__modal-content"><img srcset="<%= require('./img/flowers/img-sfsb-s.jpg') %> 375w, <%= require('./img/flowers/img-sfsb-m.jpg') %> 1366w, <%= require('./img/flowers/img-sfsb-l.jpg') %> 2560w" src="<%= require('./img/flowers/img-sfsb-l.jpg') %>"alt="So Many Flowers, So Many Beauties."></div>
         </div>
         <div class="p-flowers__modal js-modal" id="modalFlowers02">
           <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
-          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-flowers-s.jpg 375w, ./img/flowers/img-flowers-m.jpg 1366w, ./img/flowers/img-flowers-l.jpg 2560w" src="./img/flowers/img-flowers-l.jpg" alt="デジタルで書かれたたくさんの花"></div>
+          <div class="p-flowers__modal-content"><img srcset="<%= require('./img/flowers/img-flowers-s.jpg') %> 375w, <%= require('./img/flowers/img-flowers-m.jpg') %> 1366w, <%= require('./img/flowers/img-flowers-l.jpg') %> 2560w" src="<%= require('./img/flowers/img-flowers-l.jpg') %>"alt="Many flowers written digitally"></div>
         </div>
         <div class="p-flowers__modal js-modal" id="modalFlowers03">
           <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
-          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-rose-s.jpg 375w, ./img/flowers/img-rose-m.jpg 1366w, ./img/flowers/img-rose-l.jpg 2560w" src="./img/flowers/img-rose-l.jpg" alt="バラの花"></div>
+          <div class="p-flowers__modal-content"><img srcset="<%= require('./img/flowers/img-rose-s.jpg') %> 375w, <%= require('./img/flowers/img-rose-m.jpg') %> 1366w, <%= require('./img/flowers/img-rose-l.jpg') %> 2560w" src="<%= require('./img/flowers/img-rose-l.jpg') %>"alt="Rose"></div>
         </div>
         <div class="p-flowers__modal js-modal" id="modalFlowers04">
           <button class="c-button p-flowers__modal-button js-modalButtonClose">Close</button>
-          <div class="p-flowers__modal-content"><img srcset="./img/flowers/img-summer-s.jpg 375w, ./img/flowers/img-summer-m.jpg 1366w, ./img/flowers/img-summer-l.jpg 2560w" src="./img/flowers/img-summer-l.jpg" alt="夏の花"></div>
+          <div class="p-flowers__modal-content"><img srcset="<%= require('./img/flowers/img-summer-s.jpg') %> 375w, <%= require('./img/flowers/img-summer-m.jpg') %> 1366w, <%= require('./img/flowers/img-summer-l.jpg') %> 2560w" src="<%= require('./img/flowers/img-summer-l.jpg') %>"alt="Summer flowers"></div>
         </div>
       </section>
     </section>

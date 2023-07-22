@@ -15,7 +15,7 @@ export default () => {
     duration: .8,
     scrollTrigger: {
       trigger: "#js-mainvisualImage",
-      start: "top 80%",
+      start: "top 60%",
     },
   })
   const titles = document.querySelectorAll('.js-title');
